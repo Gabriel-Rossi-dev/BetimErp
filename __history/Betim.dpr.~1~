@@ -1,0 +1,14 @@
+program ErpDupla;
+
+uses
+  Vcl.Forms,
+  UfrmMenu.View.Principal in 'src\Views\UfrmMenu.View.Principal.pas' {Form1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

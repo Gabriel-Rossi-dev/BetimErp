@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/06/20 22:19:21.000.307,=C:\Users\grgab\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/20 22:25:55.000.408,C:\Users\grgab\Project\DELPHIZAO\ERP DUPLA\src\Views\UfrmMenu.View.Principal.pas=C:\Users\grgab\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/20 22:25:55.000.408,C:\Users\grgab\Project\DELPHIZAO\ERP DUPLA\src\Views\UfrmMenu.View.Principal.dfm=C:\Users\grgab\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/06/20 22:26:38.000.719,C:\Users\grgab\Project\DELPHIZAO\ERP DUPLA\ErpDupla.dproj=C:\Users\grgab\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/06/20 22:38:01.000.178,C:\Users\grgab\Project\DELPHIZAO\ERP DUPLA\Betim.dproj=C:\Users\grgab\Project\DELPHIZAO\ERP DUPLA\ErpDupla.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
