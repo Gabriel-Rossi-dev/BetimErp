@@ -1,0 +1,39 @@
+unit Betim.Model.CadastroUsuario;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt,UdmConexao, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, Data.DB, Datasnap.DBClient, Datasnap.Provider;
+
+type
+  TdmUsuarios = class(TDataModule)
+    cdsUsuarios: TClientDataSet;
+    qryUsuarios: TFDQuery;
+    dspUsuarios: TDataSetProvider;
+    cdsUsuariosNOME: TStringField;
+    cdsUsuariosLOGIN: TStringField;
+    cdsUsuariosSENHA: TStringField;
+    qryUsuariosNOME: TStringField;
+    qryUsuariosLOGIN: TStringField;
+    qryUsuariosSENHA: TStringField;
+    qryUsuariosSTATUS: TStringField;
+    cdsUsuariosSTATUS: TStringField;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmUsuarios: TdmUsuarios;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

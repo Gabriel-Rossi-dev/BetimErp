@@ -105,8 +105,25 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="src\Views\Betim.View.Principal.pas">
-            <Form>FrmPrincipal</Form>
+        <DCCReference Include="src\Views\Principal\Betim.View.Principal.pas">
+            <Form>FrmBetim</Form>
+        </DCCReference>
+        <DCCReference Include="src\Views\Usuarios\Betim.View.CadastroUsuario.pas">
+            <Form>FrmCadUsuario</Form>
+        </DCCReference>
+        <DCCReference Include="src\Views\Betim.View.Splash.pas">
+            <Form>frmSplash</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="db\UdmConexao.pas">
+            <Form>dm_dados</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="src\Views\Usuarios\Betim.Model.CadastroUsuario.pas">
+            <Form>dmUsuarios</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>

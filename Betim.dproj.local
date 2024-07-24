@@ -2,9 +2,39 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2024/06/20 22:19:21.000.307,=C:\Users\grgab\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2024/06/20 22:25:55.000.408,C:\Users\grgab\Project\DELPHIZAO\ERP DUPLA\src\Views\UfrmMenu.View.Principal.pas=C:\Users\grgab\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2024/06/20 22:25:55.000.408,C:\Users\grgab\Project\DELPHIZAO\ERP DUPLA\src\Views\UfrmMenu.View.Principal.dfm=C:\Users\grgab\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/06/20 22:25:55.000.408,C:\Users\grgab\Project\DELPHIZAO\ERP DUPLA\src\Views\UfrmMenu.View.Principal.pas=C:\Users\grgab\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2024/06/20 22:26:38.000.719,C:\Users\grgab\Project\DELPHIZAO\ERP DUPLA\ErpDupla.dproj=C:\Users\grgab\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2024/06/20 22:38:01.000.178,C:\Users\grgab\Project\DELPHIZAO\ERP DUPLA\Betim.dproj=C:\Users\grgab\Project\DELPHIZAO\ERP DUPLA\ErpDupla.dproj</Transaction>
+    <Transaction>2024/06/20 22:57:48.000.959,=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
+    <Transaction>2024/06/20 22:59:00.000.283,C:\Users\grgab\Project\DELPHIZAO\BETIM\src\Views\Betim.View.CadastroUsuario.pas=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
+    <Transaction>2024/06/20 22:59:00.000.283,C:\Users\grgab\Project\DELPHIZAO\BETIM\src\Views\Betim.View.CadastroUsuario.dfm=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.dfm</Transaction>
+    <Transaction>2024/06/24 22:33:53.000.791,=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
+    <Transaction>2024/06/24 22:34:54.000.180,C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas=C:\Users\grgab\Project\DELPHIZAO\BETIM\src\Views\Betim.View.Splash.pas</Transaction>
+    <Transaction>2024/06/24 22:34:54.000.181,C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.dfm=C:\Users\grgab\Project\DELPHIZAO\BETIM\src\Views\Betim.View.Splash.dfm</Transaction>
+    <Transaction>2024/06/27 23:35:58.000.178,=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
+    <Transaction>2024/06/28 00:23:37.000.356,C:\Users\grgab\Project\DELPHIZAO\BETIM\db\UdmConexao.dfm=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.dfm</Transaction>
+    <Transaction>2024/06/28 00:23:37.000.356,C:\Users\grgab\Project\DELPHIZAO\BETIM\db\UdmConexao.pas=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 13:56:03.000.967,=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 13:56:19.000.138,C:\Users\grgab\Project\DELPHIZAO\BETIM\src\Views\Usuarios\Betim.Model.CadastroUsuario.pas=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 13:56:19.000.138,C:\Users\grgab\Project\DELPHIZAO\BETIM\src\Views\Usuarios\Betim.Model.CadastroUsuario.dfm=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.dfm</Transaction>
+    <Transaction>2024/07/23 19:17:12.000.467,=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
   </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="db"/>
+    <File Path="db\UdmConexao.pas"/>
+    <File Path="db\UdmConexao.dfm"/>
+    <File Path="src"/>
+    <File Path="src\Views"/>
+    <File Path="src\Views\Principal"/>
+    <File Path="src\Views\Principal\Betim.View.Principal.pas"/>
+    <File Path="src\Views\Principal\Betim.View.Principal.dfm"/>
+    <File Path="src\Views\Usuarios"/>
+    <File Path="src\Views\Usuarios\Betim.Model.CadastroUsuario.pas"/>
+    <File Path="src\Views\Usuarios\Betim.Model.CadastroUsuario.dfm"/>
+    <File Path="src\Views\Usuarios\Betim.View.CadastroUsuario.pas"/>
+    <File Path="src\Views\Usuarios\Betim.View.CadastroUsuario.dfm"/>
+    <File Path="src\Views\Betim.View.Splash.pas"/>
+    <File Path="src\Views\Betim.View.Splash.dfm"/>
+  </ProjectSortOrder>
 </BorlandProject>

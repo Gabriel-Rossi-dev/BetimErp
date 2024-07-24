@@ -1,0 +1,18 @@
+program Betim;
+
+uses
+  Vcl.Forms,
+  Betim.View.Principal in 'src\Views\Betim.View.Principal.pas' {FrmBetim},
+  Betim.View.CadastroUsuario in 'src\Views\Betim.View.CadastroUsuario.pas' {FrmCadUsuario},
+  Betim.View.Splash in 'src\Views\Betim.View.Splash.pas' {frmSplash};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmBetim, FrmBetim);
+  Application.CreateForm(TFrmCadUsuario, FrmCadUsuario);
+  Application.CreateForm(TfrmSplash, frmSplash);
+  Application.Run;
+end.

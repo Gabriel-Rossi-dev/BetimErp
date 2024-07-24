@@ -1,0 +1,161 @@
+unit Betim.View.CadastroUsuario;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.WinXPanels, Vcl.ExtCtrls, Data.DB,
+  Vcl.StdCtrls, Vcl.Grids, Vcl.DBGrids, System.ImageList, Vcl.ImgList,
+  Data.FMTBcd, Data.SqlExpr, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Param, FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf,
+  FireDAC.DApt.Intf, FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client;
+
+type
+  TFrmCadUsuario = class(TForm)
+    CardPrincipal: TCardPanel;
+    CardCadastro: TCard;
+    CardPesquisa: TCard;
+    pnlPesquisa: TPanel;
+    pnlBotoesPesquisa: TPanel;
+    pnlGrid: TPanel;
+    gridCadUsuario: TDBGrid;
+    EditPesquisar: TEdit;
+    lblPesquisar: TLabel;
+    btnPesquisar: TButton;
+    ImageList1: TImageList;
+    btnFecharPesquisa: TButton;
+    btnSalvarPesquisa: TButton;
+    btnEditarPesquisa: TButton;
+    Panel1: TPanel;
+    btnFecharCadastro: TButton;
+    btnSalvarCadastro: TButton;
+    btnEditarCadastro: TButton;
+    btnImprimirPesquisa: TButton;
+    DataSource1: TDataSource;
+    qryUsuarios: TFDQuery;
+    editName: TEdit;
+    lblUsuario: TLabel;
+    Label1: TLabel;
+    EditLogin: TEdit;
+    Label2: TLabel;
+    EditSenha: TEdit;
+    editId: TEdit;
+    lblId: TLabel;
+    qryNovoUsuario: TFDQuery;
+    chkAtivo: TCheckBox;
+    qryInsert: TFDQuery;
+    procedure btnFecharPesquisaClick(Sender: TObject);
+    procedure btnSalvarPesquisaClick(Sender: TObject);
+    procedure btnFecharCadastroClick(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure gridCadUsuarioDblClick(Sender: TObject);
+    procedure btnEditarPesquisaClick(Sender: TObject);
+    procedure btnPesquisarClick(Sender: TObject);
+    procedure  chamaqrygrid();
+    procedure EditPesquisarKeyPress(Sender: TObject; var Key: Char);
+    procedure btnSalvarCadastroClick(Sender: TObject);
+  private
+    { Private declarations }
+    var newId:Integer;
+  public
+    { Public declarations }
+  end;
+
+var
+  FrmCadUsuario: TFrmCadUsuario;
+
+implementation
+
+uses
+  UdmConexao;
+
+{$R *.dfm}
+
+procedure TFrmCadUsuario.btnEditarPesquisaClick(Sender: TObject);
+begin
+  CardPrincipal.ActiveCard :=  CardCadastro;
+
+end;
+
+procedure TFrmCadUsuario.btnFecharCadastroClick(Sender: TObject);
+begin
+  case Application.MessageBox('Tem certeza que quer cancelar o cadastro ?','Cancelar',MB_ICONQUESTION + MB_YESNO ) of
+    mrYes: CardPrincipal.ActiveCard :=  CardPesquisa;
+  end;
+
+end;
+
+procedure TFrmCadUsuario.btnFecharPesquisaClick(Sender: TObject);
+begin
+  FrmCadUsuario.Close;
+end;
+
+procedure TFrmCadUsuario.btnPesquisarClick(Sender: TObject);
+begin
+  chamaQryGrid();
+end;
+
+procedure TFrmCadUsuario.btnSalvarCadastroClick(Sender: TObject);
+var status:Integer;
+begin
+
+  if chkAtivo.Checked then
+    status := 1
+  else
+    status := 2;
+
+
+  qryInsert.SQL.Text := 'INSERT INTO USUARIOS(ID,NOME, LOGIN,SENHA,STATUS,DATA_CADASTRO)'+
+                        ' VALUES('+editId.Text+','+editName.Text+','+EditLogin.Text+','+EditSenha.Text+','+ IntToStr(status)+',sysdate)';
+  qryInsert.Open;
+end;
+
+procedure TFrmCadUsuario.btnSalvarPesquisaClick(Sender: TObject);
+begin
+  CardPrincipal.ActiveCard :=  CardCadastro;
+  qryNovoUsuario.SQL.Text  := 'SELECT MAX(ID) MAX_ID FROM USUARIOS';
+  qryNovoUsuario.Open();
+  newId := qryNovoUsuario.FieldByName('MAX_ID').AsInteger;
+  editId.Text := IntToStr(newId + 1);
+end;
+
+procedure TFrmCadUsuario.chamaqrygrid;
+begin
+    if EditPesquisar.text = '' then
+  begin
+    qryUsuarios.SQL.Text := 'SELECT * FROM USUARIOS';
+    qryUsuarios.Open();
+  end
+  else
+  begin
+    qryUsuarios.SQL.Clear;
+    qryUsuarios.SQL.Text := 'SELECT * FROM USUARIOS WHERE NOME LIKE UPPER('+ QuotedStr(EditPesquisar.text)+')';
+    qryUsuarios.Open();
+    if qryUsuarios.RecordCount <= 0 then
+    begin
+      ShowMessage('Não foi possível encontrar nenhum usuário com esse nome')
+    end;
+  end;
+end;
+
+
+
+procedure TFrmCadUsuario.EditPesquisarKeyPress(Sender: TObject; var Key: Char);
+begin
+  if Key = #13 then
+    chamaQryGrid();
+end;
+
+procedure TFrmCadUsuario.FormActivate(Sender: TObject);
+begin
+  CardPrincipal.ActiveCard :=  CardPesquisa;
+end;
+
+
+procedure TFrmCadUsuario.gridCadUsuarioDblClick(Sender: TObject);
+begin
+  CardPrincipal.ActiveCard :=  CardCadastro;
+end;
+
+end.

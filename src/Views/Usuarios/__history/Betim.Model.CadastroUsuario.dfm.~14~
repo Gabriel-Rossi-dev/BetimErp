@@ -1,0 +1,53 @@
+object dmUsuarios: TdmUsuarios
+  Height = 480
+  Width = 640
+  object cdsUsuarios: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'dspUsuarios'
+    Left = 200
+    Top = 32
+    object cdsUsuariosNOME: TStringField
+      FieldName = 'NOME'
+    end
+    object cdsUsuariosLOGIN: TStringField
+      FieldName = 'LOGIN'
+    end
+    object cdsUsuariosSENHA: TStringField
+      FieldName = 'SENHA'
+    end
+    object cdsUsuariosSTATUS: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'STATUS'
+      Calculated = True
+    end
+  end
+  object qryUsuarios: TFDQuery
+    CachedUpdates = True
+    Connection = dm_dados.FDConnection1
+    SQL.Strings = (
+      'select NOME, LOGIN, SENHA, STATUS from usuarios')
+    Left = 48
+    Top = 32
+    object qryUsuariosNOME: TStringField
+      FieldName = 'NOME'
+    end
+    object qryUsuariosLOGIN: TStringField
+      FieldName = 'LOGIN'
+    end
+    object qryUsuariosSENHA: TStringField
+      FieldName = 'SENHA'
+    end
+    object qryUsuariosSTATUS: TIntegerField
+      FieldKind = fkCalculated
+      FieldName = 'STATUS'
+      Calculated = True
+    end
+  end
+  object dspUsuarios: TDataSetProvider
+    DataSet = cdsUsuarios
+    Options = [poAllowCommandText, poUseQuoteChar]
+    Left = 128
+    Top = 32
+  end
+end
