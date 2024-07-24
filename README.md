@@ -1,2 +1,2 @@
 Sistema ERP para gerenciamento de Empresas.
-Atualmente conta somente com o basico.
+Conta com Insert, UPDATE e DELETE de Clientes.
