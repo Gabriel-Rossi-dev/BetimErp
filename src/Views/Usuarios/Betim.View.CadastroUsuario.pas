@@ -39,10 +39,10 @@ type
     EditLogin: TEdit;
     Label2: TLabel;
     EditSenha: TEdit;
-    editId: TEdit;
     lblId: TLabel;
     qryNovoUsuario: TFDQuery;
     chkAtivo: TCheckBox;
+    editId: TEdit;
     procedure btnFecharPesquisaClick(Sender: TObject);
     procedure btnIncluirPesquisaClick(Sender: TObject);
     procedure btnFecharCadastroClick(Sender: TObject);

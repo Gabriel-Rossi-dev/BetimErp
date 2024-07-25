@@ -6,7 +6,8 @@ uses
   Betim.View.CadastroUsuario in 'src\Views\Usuarios\Betim.View.CadastroUsuario.pas' {FrmCadUsuario},
   Betim.View.Splash in 'src\Views\Betim.View.Splash.pas' {frmSplash},
   UdmConexao in 'db\UdmConexao.pas' {dm_dados: TDataModule},
-  Betim.Model.CadastroUsuario in 'src\Views\Usuarios\Betim.Model.CadastroUsuario.pas' {dmUsuarios: TDataModule};
+  Betim.Model.CadastroUsuario in 'src\Views\Usuarios\Betim.Model.CadastroUsuario.pas' {dmUsuarios: TDataModule},
+  Betim.View.Login in 'src\Views\Login\Betim.View.Login.pas' {frmLogin};
 
 {$R *.res}
 
@@ -17,5 +18,6 @@ begin
   Application.CreateForm(TFrmBetim, FrmBetim);
   Application.CreateForm(TFrmCadUsuario, FrmCadUsuario);
   Application.CreateForm(TdmUsuarios, dmUsuarios);
+  Application.CreateForm(TfrmLogin, frmLogin);
   Application.Run;
 end.

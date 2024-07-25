@@ -31,11 +31,10 @@ implementation
 
 procedure TfrmSplash.Timer1Timer(Sender: TObject);
 begin
-  {if ProgressBar1.Position <= 100 then
+  if ProgressBar1.Position <= 100 then
   begin
     ProgressBar1.StepIt;
     case ProgressBar1.Position of
-
     10: lblStatus.Caption := 'Carregando Depencias...';
     25: lblStatus.Caption := 'Conectando ao Banco de dados...';
     45: lblStatus.Caption := 'Carregando as configurações...';
@@ -43,8 +42,8 @@ begin
     end;
   end;
   if ProgressBar1.Position = 100 then
-    Close;}
     Close;
+
 
 end;
 

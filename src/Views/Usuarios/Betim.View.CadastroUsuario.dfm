@@ -5,8 +5,8 @@ object FrmCadUsuario: TFrmCadUsuario
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Cadastro de Usu'#225'rio'
-  ClientHeight = 460
-  ClientWidth = 709
+  ClientHeight = 490
+  ClientWidth = 706
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,27 +19,25 @@ object FrmCadUsuario: TFrmCadUsuario
   object CardPrincipal: TCardPanel
     Left = 0
     Top = 0
-    Width = 709
-    Height = 460
+    Width = 706
+    Height = 490
     Align = alClient
-    ActiveCard = CardCadastro
+    ActiveCard = CardPesquisa
     Caption = 'CardPrincipal'
     TabOrder = 0
-    ExplicitWidth = 779
-    ExplicitHeight = 525
     object CardCadastro: TCard
       Left = 1
       Top = 1
-      Width = 707
-      Height = 458
+      Width = 704
+      Height = 488
       Caption = 'CardCadastro'
       CardIndex = 0
       TabOrder = 0
-      ExplicitWidth = 777
-      ExplicitHeight = 523
+      ExplicitWidth = 707
+      ExplicitHeight = 458
       DesignSize = (
-        707
-        458)
+        704
+        488)
       object lblUsuario: TLabel
         Left = 25
         Top = 115
@@ -94,17 +92,17 @@ object FrmCadUsuario: TFrmCadUsuario
       end
       object Panel1: TPanel
         Left = 0
-        Top = 405
-        Width = 707
+        Top = 435
+        Width = 704
         Height = 53
         Align = alBottom
         TabOrder = 0
-        ExplicitTop = 470
-        ExplicitWidth = 777
+        ExplicitTop = 405
+        ExplicitWidth = 707
         object btnFecharCadastro: TButton
-          Left = 644
+          Left = 641
           Top = 6
-          Width = 57
+          Width = 58
           Height = 41
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
@@ -195,24 +193,6 @@ object FrmCadUsuario: TFrmCadUsuario
         ParentFont = False
         TabOrder = 3
       end
-      object editId: TEdit
-        Left = 197
-        Top = 9
-        Width = 0
-        Height = 31
-        Alignment = taCenter
-        Anchors = [akLeft, akTop, akRight]
-        Enabled = False
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -17
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        ParentFont = False
-        ReadOnly = True
-        TabOrder = 4
-        ExplicitWidth = 55
-      end
       object chkAtivo: TCheckBox
         Left = 588
         Top = 29
@@ -225,28 +205,43 @@ object FrmCadUsuario: TFrmCadUsuario
         Font.Name = 'Segoe UI'
         Font.Style = []
         ParentFont = False
+        TabOrder = 4
+      end
+      object editId: TEdit
+        Left = 197
+        Top = 9
+        Width = 75
+        Height = 31
+        Alignment = taCenter
+        Anchors = [akLeft, akTop, akRight]
+        Enabled = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -17
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ParentFont = False
+        ReadOnly = True
         TabOrder = 5
+        ExplicitWidth = 0
       end
     end
     object CardPesquisa: TCard
       Left = 1
       Top = 1
-      Width = 707
-      Height = 458
+      Width = 704
+      Height = 488
       Caption = 'CardPesquisa'
       CardIndex = 1
       TabOrder = 1
-      ExplicitWidth = 777
-      ExplicitHeight = 523
       object pnlPesquisa: TPanel
         Left = 0
         Top = 0
-        Width = 707
+        Width = 704
         Height = 73
         Align = alTop
         BevelOuter = bvNone
         TabOrder = 0
-        ExplicitWidth = 777
         object lblPesquisar: TLabel
           Left = 17
           Top = 4
@@ -294,15 +289,13 @@ object FrmCadUsuario: TFrmCadUsuario
       end
       object pnlBotoesPesquisa: TPanel
         Left = 0
-        Top = 408
-        Width = 707
+        Top = 438
+        Width = 704
         Height = 50
         Align = alBottom
         TabOrder = 1
-        ExplicitTop = 473
-        ExplicitWidth = 777
         object btnFecharPesquisa: TButton
-          Left = 644
+          Left = 640
           Top = 4
           Width = 57
           Height = 41
@@ -372,17 +365,15 @@ object FrmCadUsuario: TFrmCadUsuario
       object pnlGrid: TPanel
         Left = 0
         Top = 73
-        Width = 707
-        Height = 335
+        Width = 704
+        Height = 365
         Align = alClient
         TabOrder = 2
-        ExplicitWidth = 777
-        ExplicitHeight = 400
         object gridCadUsuario: TDBGrid
           Left = 1
           Top = 1
-          Width = 705
-          Height = 333
+          Width = 702
+          Height = 363
           Align = alClient
           DataSource = dsUsuarios
           Font.Charset = DEFAULT_CHARSET

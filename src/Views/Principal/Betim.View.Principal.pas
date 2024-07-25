@@ -28,12 +28,21 @@ implementation
 
 uses
   Betim.View.CadastroUsuario,
-  Betim.View.Splash;
+  Betim.View.Splash,
+  Betim.View.Login;
 
 {$R *.dfm}
 
 procedure TFrmBetim.FormCreate(Sender: TObject);
 begin
+
+  frmLogin  := TfrmLogin.Create(nil);
+  try
+    frmLogin.ShowModal;
+  finally
+    FreeAndNil(frmLogin);
+  end;
+
   frmSplash := TfrmSplash.Create(nil);
   try
     frmSplash.ShowModal;
