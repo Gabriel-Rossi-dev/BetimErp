@@ -15,6 +15,27 @@ object FrmBetim: TFrmBetim
   WindowState = wsMaximized
   OnCreate = FormCreate
   TextHeight = 15
+  object Panel1: TPanel
+    Left = 0
+    Top = 712
+    Width = 1189
+    Height = 33
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 0
+    object lblUsuarioLogado: TLabel
+      AlignWithMargins = True
+      Left = 30
+      Top = 3
+      Width = 3
+      Height = 27
+      Margins.Left = 30
+      Align = alLeft
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitHeight = 15
+    end
+  end
   object MainMenu1: TMainMenu
     Left = 1064
     Top = 16

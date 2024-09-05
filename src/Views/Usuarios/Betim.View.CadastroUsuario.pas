@@ -100,6 +100,8 @@ begin
             qryDelete.SQL.Text:=            ' DELETE FROM USUARIOS WHERE ID = :pID';
             qryDelete.ParamByName('pID').AsString                 := editId.text ;
             qryDelete.ExecSQL;
+
+            Application.MessageBox('Registro Apagado com sucesso','Atenção',MB_OK + MB_ICONINFORMATION);
           end;
           mrNo:Abort;
         end;
@@ -115,6 +117,7 @@ begin
   end;
     CardPrincipal.ActiveCard :=  CardPesquisa;
     dmUsuarios.cdsUsuarios.Close;
+    LimpaCampos;
 
 end;
 
@@ -164,7 +167,6 @@ end;
 
 procedure TFrmCadUsuario.btnSalvarCadastroClick(Sender: TObject);
 begin
-
 
   try
     qryConsulta := TFDQuery.Create(nil);
@@ -219,6 +221,8 @@ begin
         Abort;
       end;
 
+      Application.MessageBox('Registro Alterado com sucesso','Atenção',MB_OK + MB_ICONINFORMATION);
+
     end
     else if insere then
     begin
@@ -226,6 +230,22 @@ begin
         status := '1'
       else
         status := '2';
+
+      if editName.Text = '' then
+      begin
+        Application.MessageBox('O campo nome não pode estar vazio','Atenção',MB_OK + MB_ICONWARNING);
+        abort;
+      end;
+        if EditLogin.Text = '' then
+      begin
+        Application.MessageBox('O campo login não pode estar vazio','Atenção',MB_OK + MB_ICONWARNING);
+        abort;
+      end;
+        if EditSenha.Text = '' then
+      begin
+        Application.MessageBox('O campo senha não pode estar vazio','Atenção',MB_OK + MB_ICONWARNING);
+        abort;
+      end;
 
             try
         qryConsulta.Close;
@@ -253,6 +273,8 @@ begin
           qryConsulta.ParamByName('pDATA_CADASTRO').AsDateTime    := NOW;
           qryConsulta.ExecSQL;
 
+          Application.MessageBox('Registro Incluido com sucesso','Atenção',MB_OK + MB_ICONINFORMATION);
+
       except
         Application.MessageBox('Erro ao inserir Cliente','ERRO');
         Abort;
@@ -264,11 +286,11 @@ begin
         Abort;
       end;
 
+
   finally
     qryConsulta.Free;
   end;
 
-  Application.MessageBox('Registro Alterado com sucesso','Atenção',MB_OK + MB_ICONINFORMATION);
   LimpaCampos;
   CardPrincipal.ActiveCard :=  CardPesquisa;
   insere := false;

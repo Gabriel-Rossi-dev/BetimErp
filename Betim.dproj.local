@@ -20,14 +20,26 @@
     <Transaction>2024/07/20 13:56:19.000.138,C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas=C:\Users\grgab\Project\DELPHIZAO\BETIM\src\Views\Usuarios\Betim.Model.CadastroUsuario.pas</Transaction>
     <Transaction>2024/07/23 19:17:12.000.467,=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
     <Transaction>2024/07/24 20:21:39.000.949,=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
-    <Transaction>2024/07/24 20:40:32.000.402,C:\Users\grgab\Project\DELPHIZAO\BETIM\src\Views\Login\Betim.View.Login.dfm=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.dfm</Transaction>
     <Transaction>2024/07/24 20:40:32.000.402,C:\Users\grgab\Project\DELPHIZAO\BETIM\src\Views\Login\Betim.View.Login.pas=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
+    <Transaction>2024/07/24 20:40:32.000.402,C:\Users\grgab\Project\DELPHIZAO\BETIM\src\Views\Login\Betim.View.Login.dfm=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.dfm</Transaction>
+    <Transaction>2024/07/25 20:48:22.000.765,=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
+    <Transaction>2024/07/25 20:48:42.000.452,C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas=C:\Users\grgab\Project\DELPHIZAO\BETIM\Global.pas</Transaction>
+    <Transaction>2024/07/25 20:55:36.000.485,=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
+    <Transaction>2024/07/25 21:13:45.000.947,C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas=C:\Users\grgab\Project\DELPHIZAO\BETIM\src\Global\Betim.Global.pas</Transaction>
+    <Transaction>2024/08/06 23:20:30.631,=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
+    <Transaction>2024/08/06 23:30:55.026,C:\Users\grgab\Project\DELPHIZAO\BETIM\src\Modal\Unit1.dfm=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.dfm</Transaction>
+    <Transaction>2024/08/06 23:30:55.026,C:\Users\grgab\Project\DELPHIZAO\BETIM\src\Modal\Unit1.pas=C:\Users\grgab\Project\DELPHIZAO\BETIM\Unit1.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="db"/>
     <File Path="db\UdmConexao.pas"/>
     <File Path="db\UdmConexao.dfm"/>
     <File Path="src"/>
+    <File Path="src\Global"/>
+    <File Path="src\Global\Betim.Global.pas"/>
+    <File Path="src\Modal"/>
+    <File Path="src\Modal\Unit1.pas"/>
+    <File Path="src\Modal\Unit1.dfm"/>
     <File Path="src\Views"/>
     <File Path="src\Views\Login"/>
     <File Path="src\Views\Login\Betim.View.Login.pas"/>

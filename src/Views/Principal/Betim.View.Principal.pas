@@ -3,8 +3,9 @@ unit Betim.View.Principal;
 interface
 
 uses
-  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.WinXPanels, Vcl.ExtCtrls;
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,Betim.Global, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.WinXPanels, Vcl.ExtCtrls,
+  Vcl.StdCtrls;
 
 type
   TFrmBetim = class(TForm)
@@ -13,6 +14,8 @@ type
     mnuRelatorio: TMenuItem;
     mnuAjuda: TMenuItem;
     mnuCadUsuario: TMenuItem;
+    Panel1: TPanel;
+    lblUsuarioLogado: TLabel;
     procedure mnuCadUsuarioClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
@@ -27,29 +30,16 @@ var
 implementation
 
 uses
-  Betim.View.CadastroUsuario,
-  Betim.View.Splash,
-  Betim.View.Login;
+  Betim.View.CadastroUsuario, Betim.View.Login;
 
 {$R *.dfm}
 
 procedure TFrmBetim.FormCreate(Sender: TObject);
 begin
-
-  frmLogin  := TfrmLogin.Create(nil);
-  try
-    frmLogin.ShowModal;
-  finally
-    FreeAndNil(frmLogin);
-  end;
-
-  frmSplash := TfrmSplash.Create(nil);
-  try
-    frmSplash.ShowModal;
-  finally
-    FreeAndNil(frmSplash);
-  end;
-
+  lblUsuarioLogado.Caption := frmLogin.GetGUsuario();
+  //frmLogin.Action := caFree;
+  frmLogin.ModalResult := mrOk;
+  frmLogin.FreeOnRelease;
 end;
 
 procedure TFrmBetim.mnuCadUsuarioClick(Sender: TObject);

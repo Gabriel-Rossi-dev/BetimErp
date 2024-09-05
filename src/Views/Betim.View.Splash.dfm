@@ -5,8 +5,8 @@ object frmSplash: TfrmSplash
   BorderIcons = []
   BorderStyle = bsNone
   Caption = 'frmSplash'
-  ClientHeight = 296
-  ClientWidth = 555
+  ClientHeight = 331
+  ClientWidth = 943
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,12 +14,14 @@ object frmSplash: TfrmSplash
   Font.Name = 'Segoe UI'
   Font.Style = []
   Position = poScreenCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
   TextHeight = 15
   object pnlPrincipal: TPanel
     Left = 0
     Top = 0
-    Width = 555
-    Height = 296
+    Width = 943
+    Height = 331
     Align = alClient
     BevelOuter = bvNone
     Color = clHighlight
@@ -29,7 +31,7 @@ object frmSplash: TfrmSplash
       AlignWithMargins = True
       Left = 3
       Top = 20
-      Width = 549
+      Width = 937
       Height = 153
       Margins.Top = 20
       Align = alTop
@@ -1513,7 +1515,7 @@ object frmSplash: TfrmSplash
       AlignWithMargins = True
       Left = 3
       Top = 179
-      Width = 549
+      Width = 937
       Height = 43
       Align = alTop
       Alignment = taCenter
@@ -1530,8 +1532,8 @@ object frmSplash: TfrmSplash
     end
     object lblStatus: TLabel
       Left = 0
-      Top = 262
-      Width = 555
+      Top = 297
+      Width = 943
       Height = 21
       Align = alBottom
       Alignment = taCenter
@@ -1547,18 +1549,19 @@ object frmSplash: TfrmSplash
     end
     object ProgressBar1: TProgressBar
       Left = 0
-      Top = 283
-      Width = 555
+      Top = 318
+      Width = 943
       Height = 13
+      Hint = 'Sair'
       Align = alBottom
-      Step = 1
+      Step = 5
       TabOrder = 0
     end
   end
   object Timer1: TTimer
     Interval = 50
     OnTimer = Timer1Timer
-    Left = 576
-    Top = 216
+    Left = 648
+    Top = 200
   end
 end

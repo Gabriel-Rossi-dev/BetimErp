@@ -13,9 +13,11 @@ type
     ProgressBar1: TProgressBar;
     Image1: TImage;
     Label1: TLabel;
-    Timer1: TTimer;
     lblStatus: TLabel;
+    Timer1: TTimer;
     procedure Timer1Timer(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
   private
     { Private declarations }
   public
@@ -27,7 +29,21 @@ var
 
 implementation
 
+uses
+  Betim.View.Principal;
+
 {$R *.dfm}
+
+
+procedure TfrmSplash.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action:= caFree;
+end;
+
+procedure TfrmSplash.FormCreate(Sender: TObject);
+begin
+  Timer1.OnTimer := Timer1Timer;
+end;
 
 procedure TfrmSplash.Timer1Timer(Sender: TObject);
 begin
@@ -42,8 +58,12 @@ begin
     end;
   end;
   if ProgressBar1.Position = 100 then
-    Close;
-
+  begin
+    Timer1.OnTimer := nil;
+    ModalResult := mrOk;
+    close;
+    exit;
+  end;
 
 end;
 

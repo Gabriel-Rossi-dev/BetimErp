@@ -22,7 +22,7 @@ object FrmCadUsuario: TFrmCadUsuario
     Width = 706
     Height = 490
     Align = alClient
-    ActiveCard = CardPesquisa
+    ActiveCard = CardCadastro
     Caption = 'CardPrincipal'
     TabOrder = 0
     object CardCadastro: TCard
@@ -33,8 +33,6 @@ object FrmCadUsuario: TFrmCadUsuario
       Caption = 'CardCadastro'
       CardIndex = 0
       TabOrder = 0
-      ExplicitWidth = 707
-      ExplicitHeight = 458
       DesignSize = (
         704
         488)
@@ -97,8 +95,6 @@ object FrmCadUsuario: TFrmCadUsuario
         Height = 53
         Align = alBottom
         TabOrder = 0
-        ExplicitTop = 405
-        ExplicitWidth = 707
         object btnFecharCadastro: TButton
           Left = 641
           Top = 6
@@ -223,7 +219,6 @@ object FrmCadUsuario: TFrmCadUsuario
         ParentFont = False
         ReadOnly = True
         TabOrder = 5
-        ExplicitWidth = 0
       end
     end
     object CardPesquisa: TCard
@@ -260,6 +255,7 @@ object FrmCadUsuario: TFrmCadUsuario
           Top = 31
           Width = 544
           Height = 29
+          CharCase = ecUpperCase
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -16
@@ -270,10 +266,13 @@ object FrmCadUsuario: TFrmCadUsuario
           OnKeyPress = EditPesquisarKeyPress
         end
         object btnPesquisar: TButton
-          Left = 638
-          Top = 29
+          Left = 640
+          Top = 28
           Width = 42
           Height = 36
+          Cursor = crHandPoint
+          Hint = 'Pesquisar Cliente'
+          HelpType = htKeyword
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -16
@@ -283,6 +282,8 @@ object FrmCadUsuario: TFrmCadUsuario
           ImageIndex = 5
           Images = ImageList1
           ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
           TabOrder = 1
           OnClick = btnPesquisarClick
         end
@@ -296,9 +297,11 @@ object FrmCadUsuario: TFrmCadUsuario
         TabOrder = 1
         object btnFecharPesquisa: TButton
           Left = 640
-          Top = 4
+          Top = 5
           Width = 57
           Height = 41
+          Cursor = crHandPoint
+          Hint = 'Sair'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -16
@@ -308,6 +311,8 @@ object FrmCadUsuario: TFrmCadUsuario
           ImageIndex = 6
           Images = ImageList1
           ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
           TabOrder = 0
           OnClick = btnFecharPesquisaClick
         end
@@ -316,6 +321,8 @@ object FrmCadUsuario: TFrmCadUsuario
           Top = 4
           Width = 57
           Height = 41
+          Cursor = crHandPoint
+          Hint = 'Incluir'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -16
@@ -325,14 +332,18 @@ object FrmCadUsuario: TFrmCadUsuario
           ImageIndex = 0
           Images = ImageList1
           ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
           TabOrder = 1
           OnClick = btnIncluirPesquisaClick
         end
         object btnEditarPesquisa: TButton
-          Left = 75
-          Top = 4
+          Left = 74
+          Top = 5
           Width = 57
           Height = 41
+          Cursor = crHandPoint
+          Hint = 'Editar'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -16
@@ -342,14 +353,18 @@ object FrmCadUsuario: TFrmCadUsuario
           ImageIndex = 1
           Images = ImageList1
           ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
           TabOrder = 2
           OnClick = btnEditarPesquisaClick
         end
         object btnImprimirPesquisa: TButton
-          Left = 142
-          Top = 4
+          Left = 141
+          Top = 5
           Width = 57
           Height = 41
+          Cursor = crHandPoint
+          Hint = 'Imprimir'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
           Font.Height = -16
@@ -359,6 +374,8 @@ object FrmCadUsuario: TFrmCadUsuario
           ImageIndex = 3
           Images = ImageList1
           ParentFont = False
+          ParentShowHint = False
+          ShowHint = True
           TabOrder = 3
         end
       end

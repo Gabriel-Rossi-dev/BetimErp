@@ -1,0 +1,68 @@
+unit Betim.Global;
+
+interface
+type
+//  IGlobal = interface
+//  function  newInstance():IGlobal;
+//  function getUsuario():string;
+//  procedure setUsuario(value:string);
+//  end;
+
+  Global = class{TInterfacedObject,IGlobal}
+  private
+    FGUsuario: string;
+    FGCodigoUsuario: string;
+    FGLoginUsuario: string;
+    procedure SetGUsuario(const Value: string);
+    procedure SetGCodigoUsuario(const Value: string);
+    procedure SetGLoginUsuario(const Value: string);
+    var gGlobal: Global;
+    function getUsuario():string;
+  procedure setUsuario(value:string);
+
+  public
+  function  newInstance():Global;
+  property GUsuario :string read FGUsuario write SetGUsuario;
+  property GCodigoUsuario: string read FGCodigoUsuario write SetGCodigoUsuario;
+  property GLoginUsuario:string read FGLoginUsuario write SetGLoginUsuario;
+
+
+
+  end;
+
+implementation
+
+{ Global }
+
+function Global.getUsuario: string;
+begin
+  result := FGUsuario;
+end;
+
+function Global.newInstance: Global;
+begin
+  result := self;
+end;
+
+procedure Global.SetGCodigoUsuario(const Value: string);
+begin
+  FGCodigoUsuario := Value;
+end;
+
+procedure Global.SetGLoginUsuario(const Value: string);
+begin
+  FGLoginUsuario := Value;
+end;
+
+procedure Global.SetGUsuario(const Value: string);
+begin
+  FGUsuario := Value;
+end;
+
+
+procedure Global.setUsuario(value: string);
+begin
+  FGUsuario:= value;
+end;
+
+end.

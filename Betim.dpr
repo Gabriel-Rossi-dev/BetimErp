@@ -7,7 +7,9 @@ uses
   Betim.View.Splash in 'src\Views\Betim.View.Splash.pas' {frmSplash},
   UdmConexao in 'db\UdmConexao.pas' {dm_dados: TDataModule},
   Betim.Model.CadastroUsuario in 'src\Views\Usuarios\Betim.Model.CadastroUsuario.pas' {dmUsuarios: TDataModule},
-  Betim.View.Login in 'src\Views\Login\Betim.View.Login.pas' {frmLogin};
+  Betim.View.Login in 'src\Views\Login\Betim.View.Login.pas' {frmLogin},
+  Betim.Global in 'src\Global\Betim.Global.pas',
+  Unit1 in 'src\Modal\Unit1.pas' {DataModule1: TDataModule};
 
 {$R *.res}
 
@@ -15,9 +17,10 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(Tdm_dados, dm_dados);
-  Application.CreateForm(TFrmBetim, FrmBetim);
-  Application.CreateForm(TFrmCadUsuario, FrmCadUsuario);
   Application.CreateForm(TdmUsuarios, dmUsuarios);
   Application.CreateForm(TfrmLogin, frmLogin);
+  Application.CreateForm(TFrmBetim, FrmBetim);
+  Application.CreateForm(TFrmCadUsuario, FrmCadUsuario);
+  Application.CreateForm(TDataModule1, DataModule1);
   Application.Run;
 end.

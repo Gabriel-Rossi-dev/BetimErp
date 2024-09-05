@@ -113,21 +113,23 @@
         </DCCReference>
         <DCCReference Include="src\Views\Betim.View.Splash.pas">
             <Form>frmSplash</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="db\UdmConexao.pas">
             <Form>dm_dados</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="src\Views\Usuarios\Betim.Model.CadastroUsuario.pas">
             <Form>dmUsuarios</Form>
-            <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <DCCReference Include="src\Views\Login\Betim.View.Login.pas">
             <Form>frmLogin</Form>
+        </DCCReference>
+        <DCCReference Include="src\Global\Betim.Global.pas"/>
+        <DCCReference Include="src\Modal\Unit1.pas">
+            <Form>DataModule1</Form>
             <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
